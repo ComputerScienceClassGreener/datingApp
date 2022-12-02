@@ -52,7 +52,7 @@ public class methods {
         regUser newUser = new regUser(fn, ln, age,em,pw,hc,pe,in);
                 
                 
-        printData(newUser);
+//        printData(newUser);
         
         //up to here
         
@@ -85,6 +85,8 @@ public class methods {
         
     }
     
+    
+    // this method loops through the users Arraylist and prints out the firstnames of all the obejcts in each index
     public static void printAllfirstnames(){
         
         for (int x = 0;x<usersArray.size();x++){
@@ -94,7 +96,7 @@ public class methods {
     }
   
     }
-    
+    // this method allows a user to repeat the register method until the user does not want to
     public static void keepAddingUsers(){
         
         Scanner question = new Scanner(System.in);

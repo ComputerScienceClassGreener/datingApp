@@ -9,14 +9,11 @@ public class DatingApp2 {
 
    
     public static void main(String[] args) {
-        
-        
-        
-        // methods.register();
-        
+               
        
 methods.keepAddingUsers();
 
+methods.printAllfirstnames();
 
 
     }
