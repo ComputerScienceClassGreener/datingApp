@@ -100,12 +100,11 @@ public class methods {
         Scanner question = new Scanner(System.in);
         boolean keepAdding = true;
         
+        register();
+        
         while (keepAdding==true){
             
-            register();
-            
-            
-            
+                 
             System.out.println("Do you want to add more users? type y for Yes or n for No");
             
             String answer = question.nextLine();
