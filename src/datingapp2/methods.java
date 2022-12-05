@@ -122,9 +122,40 @@ public class methods {
             }
             
         }
-        System.out.println("Here are all the firstames:");
         
-        printAllfirstnames();
+        System.out.println("Give me a name to search for");
+        // use the question scanner to store the name the user is looking for and pass it to the search method
+        String reply = question.nextLine();
+        
+        searchName2(reply);
+        
+    }
+    
+    
+    // this method will search the arraylist for a name you give it
+    public static void searchName2(String Name){
+        //flag that changes to true if the name is found in the arraylist
+        boolean found = false;
+        int indexFoundAt =0;
+        // loops through the arraylist
+       for (int x = 0;x<usersArray.size();x++){
+           //checks to see if each index contains the name you are looking for
+           if (Name.equals(usersArray.get(x).getFirstName())){
+               
+               found = true;
+               // stores the index number where the name was found
+               indexFoundAt=x;
+           }
+       }
+       if (found ==true){
+           System.out.println("Clients data is found and is below:");
+        System.out.println(usersArray.get(indexFoundAt).getFirstName());
+        System.out.println(usersArray.get(indexFoundAt).getLastName());
+        System.out.println(usersArray.get(indexFoundAt).getAge());
+       }
+       else{
+           System.out.println("Client is not here");
+       }
     }
     
 }
