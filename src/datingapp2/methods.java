@@ -1,6 +1,7 @@
 
 package datingapp2;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class methods {
    static ArrayList<regUser> usersArray = new ArrayList<regUser>(); // Create an ArrayList (this is dynamic) that will store instances of regUser class 
     
     
-    public static void register(){
+    public static void register() throws IOException{
         
         Scanner scan = new Scanner(System.in);
         
@@ -52,9 +53,11 @@ public class methods {
         regUser newUser = new regUser(fn, ln, age,em,pw,hc,pe,in);
                 
                 
-//        printData(newUser);
+
+        // calls the static method output that will send the new User objects data to a text file
+        outputMethods.outputUsers(newUser);
         
-        //up to here
+        
         
         usersArray.add(newUser); //adds the newUser object to the arraylist
                 
@@ -97,7 +100,7 @@ public class methods {
   
     }
     // this method allows a user to repeat the register method until the user does not want to
-    public static void keepAddingUsers(){
+    public static void keepAddingUsers() throws IOException{
         
         Scanner question = new Scanner(System.in);
         boolean keepAdding = true;
@@ -157,5 +160,35 @@ public class methods {
            System.out.println("Client is not here");
        }
     }
+    
+    
+    //need to cover I/O first before we do this 8/12
+    
+//    public static String rangeQuestion(){
+//        
+//        Scanner range = new Scanner(System.in);
+//        
+//        System.out.println("What range of age would you like to date? A = 20-40, B = 40-60, C = 60 and above");
+//        
+//        String rangeResult = range.nextLine();
+//        
+//        return rangeResult;       
+//    }
+//    
+//    public static void ageSearch(String range){
+//        
+//        if(range=="C"){
+//            for(int x = 0; x<usersArray.size();x++){
+//                
+//                if (usersArray.get(x).getAge()>59){
+//                
+//            }
+//                
+//            }
+//        }
+//        
+//        
+//    }
+    
     
 }
