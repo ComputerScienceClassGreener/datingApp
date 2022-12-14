@@ -59,7 +59,7 @@ public class methods {
         
         
         
-        usersArray.add(newUser); //adds the newUser object to the arraylist
+        //usersArray.add(newUser); //adds the newUser object to the arraylist
                 
         
     }
@@ -126,11 +126,11 @@ public class methods {
             
         }
         
-        System.out.println("Give me a name to search for");
-        // use the question scanner to store the name the user is looking for and pass it to the search method
-        String reply = question.nextLine();
-        
-        searchName2(reply);
+//        System.out.println("Give me a name to search for");
+//        // use the question scanner to store the name the user is looking for and pass it to the search method
+//        String reply = question.nextLine();
+//        
+//        searchName2(reply);
         
     }
     

@@ -12,9 +12,9 @@ public class DatingApp2 {
     public static void main(String[] args) throws IOException {
                
        
-methods.keepAddingUsers();
+//methods.keepAddingUsers();
 
-
+inputMethod.readFile();
 
 
     }

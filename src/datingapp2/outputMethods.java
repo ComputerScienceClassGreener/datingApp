@@ -15,7 +15,7 @@ public class outputMethods {
         // this makes an object ready to send to a file
         output = new BufferedWriter(new FileWriter("/Users/harvhead/NetBeansProjects/datingApp2/src/datingapp2/users2.txt", true));
          // adds the objects variables to the txt file
-        output.append(Object.getFirstName() + "," + Object.getLastName()+ "," + Object.getEmail() + ","+ Object.getAge());
+        output.append(Object.getFirstName() + "," + Object.getLastName()+ "," + Object.getAge()+ ","+ Object.getEmail() + ","+Object.getPassword() + ","+Object.getHaircolour()+ ","+Object.getPersonality()+ ","+Object.getInterests());
         // adds a new line on the text file
         output.newLine();
         // needs to be closed otherwise the next line of text will overwrite the last line of text
