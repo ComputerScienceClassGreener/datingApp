@@ -11,6 +11,39 @@ public class methods {
    static ArrayList<regUser> usersArray = new ArrayList<regUser>(); // Create an ArrayList (this is dynamic) that will store instances of regUser class 
     
     
+   
+  public static void matchPers(String pers){
+      
+       for (int x = 0;x<usersArray.size();x++){
+        
+           
+           if (usersArray.get(x).getPersonality().equals(pers)){
+               
+               System.out.println(usersArray.get(x).getFirstName()+ " is a match for you");
+           }
+                  
+    }
+      
+  }
+     
+     public static void matchPandI(String pers, String interests){
+         for (int x = 0;x<usersArray.size();x++){
+        
+           
+           if ((usersArray.get(x).getPersonality().equals(pers))
+                   && (usersArray.get(x).getInterests().equals(interests))){
+               
+               System.out.println(usersArray.get(x).getFirstName()+ " is a match for you");
+           }
+            
+        
+    }
+     }
+   
+   
+   
+   
+   
     public static void register() throws IOException{
         
         Scanner scan = new Scanner(System.in);
